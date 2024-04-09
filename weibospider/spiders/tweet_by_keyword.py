@@ -23,12 +23,12 @@ class TweetSpiderByKeyword(Spider):
         爬虫入口
         """
         # 这里keywords可替换成实际待采集的数据
-        keywords = ['丽江']
+        keywords = ['哈尔滨旅游','哈尔滨美食','哈尔滨住宿','哈尔滨','哈尔滨交通','哈尔滨景点','哈尔滨天气','哈尔滨自驾游','哈尔滨旅游攻略','哈尔滨旅游局','哈尔滨秋林红肠','哈尔滨旅游团','哈尔滨旅游必去景点','哈尔滨冰雪大世界']
         # 这里的时间可替换成实际需要的时间段
-        start_time = datetime.datetime(year=2022, month=10, day=1, hour=0)
-        end_time = datetime.datetime(year=2022, month=10, day=7, hour=23)
+        start_time = datetime.datetime(year=2023, month=12, day=1, hour=0)
+        end_time = datetime.datetime(year=2024, month=1, day=31, hour=23)
         # 是否按照小时进行切分，数据量更大; 对于非热门关键词**不需要**按照小时切分
-        is_split_by_hour = True
+        is_split_by_hour = False
         for keyword in keywords:
             if not is_split_by_hour:
                 _start_time = start_time.strftime("%Y-%m-%d-%H")
